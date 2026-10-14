@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCast Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <a class="logo" href="#">✦ SkyCast<span>.</span></a>
+      <button id="unitBtn">°C / °F</button>
+    </header>
+
+    <h1>Weather, <span>your way.</span></h1>
+    <p class="subtitle">Discover the atmosphere around you.</p>
+
+    <form id="searchForm">
+      <input id="cityInput" value="Jaipur"
+        placeholder="Enter city name..." required>
+      <button type="submit">Search</button>
+    </form>
+    <p id="status">Loading weather...</p>
+
+    <section class="weather-card">
+      <div class="weather-info">
+        <p class="label">CURRENT WEATHER</p>
+        <h2 id="city">Jaipur</h2>
+        <p id="date">Today's weather</p>
+        <div class="temperature"><span id="temp">--</span><sup id="unit">°C</sup></div>
+        <h3 id="condition">Loading...</h3>
+        <p id="feels">Feels like --°</p>
+      </div>
+      <div id="weatherIcon" class="weather-icon">☀️</div>
+      <div class="quick-stats">
+        <div><span>🌡️</span><small>High / Low</small><strong id="highlow">-- / --</strong></div>
+        <div><span>💧</span><small>Humidity</small><strong id="humidity">--%</strong></div>
+        <div><span>💨</span><small>Wind</small><strong id="wind">-- km/h</strong></div>
+      </div>
+    </section>
+
+    <section class="environment">
+      <p class="label">OUTSIDE RIGHT NOW</p>
+      <h2>Environment</h2>
+      <div id="scene" class="scene sunny">
+        <div class="scene-sun"></div>
+        <div class="scene-cloud cloud1"></div>
+        <div class="scene-cloud cloud2"></div>
+        <div class="hills"></div>
+        <div class="scene-text" id="sceneText">A beautiful day outside</div>
+      </div>
+      <p id="description">Checking the atmosphere...</p>
+      <div class="sun-times">
+        <div>🌅 Sunrise <strong id="sunrise">--:--</strong></div>
+        <div>🌇 Sunset <strong id="sunset">--:--</strong></div>
+      </div>
+    </section>
+
+    <section class="forecast">
+      <p class="label">PLAN AHEAD</p>
+      <h2>5-Day Forecast</h2>
+      <div id="forecastList">Loading forecast...</div>
+    </section>
+
+    <footer>Made with ❤️ | Weather data by Open-Meteo</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
